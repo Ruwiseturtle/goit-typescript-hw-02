@@ -6,10 +6,10 @@
 enum Days {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday}
 
 function isWeekend(day:Days):boolean{
-  if (day === (Days.Saturday | Days.Sunday)) {
-    return false;
+  if (day === (Days.Saturday || Days.Sunday)) {
+    return true;
   }
   else {
-    return true;
+    return false;
   }
 }

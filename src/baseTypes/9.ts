@@ -2,12 +2,20 @@
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
 
-type pagesType = {
-  [key: string]: string | number | object | [];
+// type PagesType = {
+//   [key: string]: string | number | object | [];
+// }
+
+type PagesType = {
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: string;
+  details?: {createAt: Date, updateAt: Date};
 }
 
-const page1: pagesType = {
-  title: 'The awesome page',
+const page1: PagesType = {
+  title:'The awesome page',
   likes: 100,
   accounts: ['Max', 'Anton', 'Nikita'],
   status: 'open',
@@ -17,7 +25,7 @@ const page1: pagesType = {
   }
 }
 
-const page2: pagesType = {
+const page2: PagesType = {
   title: 'Python or Js',
   likes: 5,
   accounts: ['Alex'],
